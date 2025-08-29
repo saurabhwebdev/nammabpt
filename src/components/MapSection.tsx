@@ -19,18 +19,18 @@ const MapWrapper = dynamic(() => import('@/components/MapWrapper'), {
 
 export default function MapSection() {
   return (
-    <div className="py-20">
+    <div className="py-20" style={{ backgroundColor: colors.primary[700] }}>
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2
             className="text-3xl lg:text-4xl font-bold mb-4"
-            style={{ color: colors.text.primary }}
+            style={{ color: colors.text.white }}
           >
             Explore Bengaluru
           </h2>
           <p
-            className="text-lg max-w-2xl mx-auto"
-            style={{ color: colors.text.secondary }}
+            className="text-lg max-w-2xl mx-auto opacity-90"
+            style={{ color: colors.text.white }}
           >
             Every street, every neighborhood matters. See where you can make a difference.
           </p>
@@ -72,21 +72,21 @@ export default function MapSection() {
               <div
                 className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium"
                 style={{
-                  backgroundColor: `${colors.special.comingSoon}20`,
-                  color: colors.special.comingSoon
+                  backgroundColor: `rgba(255, 255, 255, 0.2)`,
+                  color: colors.text.white
                 }}
               >
                 🌟 Coming Soon
               </div>
               <h3
                 className="text-2xl lg:text-3xl font-bold"
-                style={{ color: colors.text.primary }}
+                style={{ color: colors.text.white }}
               >
                 Your City, Your Voice
               </h3>
               <p
-                className="text-lg leading-relaxed"
-                style={{ color: colors.text.secondary }}
+                className="text-lg leading-relaxed opacity-90"
+                style={{ color: colors.text.white }}
               >
                 Soon you'll be able to click anywhere on this map to report road issues, 
                 track repairs, and see real-time updates from your community.
@@ -116,13 +116,13 @@ export default function MapSection() {
                   <div>
                     <h4
                       className="font-semibold mb-1"
-                      style={{ color: colors.text.primary }}
+                      style={{ color: colors.text.white }}
                     >
                       {feature.title}
                     </h4>
                     <p
-                      className="text-sm"
-                      style={{ color: colors.text.secondary }}
+                      className="text-sm opacity-90"
+                      style={{ color: colors.text.white }}
                     >
                       {feature.description}
                     </p>
@@ -134,13 +134,13 @@ export default function MapSection() {
             <div
               className="p-4 rounded-xl border-l-4"
               style={{
-                backgroundColor: colors.background.accent,
-                borderLeftColor: colors.special.comingSoon
+                backgroundColor: `rgba(255, 255, 255, 0.1)`,
+                borderLeftColor: colors.text.white
               }}
             >
               <p
                 className="text-sm font-medium"
-                style={{ color: colors.text.primary }}
+                style={{ color: colors.text.white }}
               >
                 💡 Pro Tip: Bookmark this page to be notified when we launch!
               </p>

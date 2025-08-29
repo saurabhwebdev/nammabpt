@@ -9,13 +9,13 @@ export const metadata = generateMetadata('home');
 export default function Home() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: colors.background.main }}>
-      {/* Hero Section - Full Screen Purple */}
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" style={{ backgroundColor: colors.primary[700] }}>
+      {/* Hero Section - Full Screen White */}
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20" style={{ backgroundColor: colors.text.white }}>
         {/* Animated Background Pattern */}
         <div
           className="absolute inset-0 opacity-0 hero-pattern-animate"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Cpath d='M60 60c0-16.569-13.431-30-30-30s-30 13.431-30 30 13.431 30 30 30 30-13.431 30-30zm30 0c0-16.569-13.431-30-30-30s-30 13.431-30 30 13.431 30 30 30 30-13.431 30-30z'/%3E%3Ccircle cx='60' cy='60' r='3' opacity='0.6'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23${colors.primary[700].replace('#', '')}' fill-opacity='0.05'%3E%3Cpath d='M60 60c0-16.569-13.431-30-30-30s-30 13.431-30 30 13.431 30 30 30 30-13.431 30-30zm30 0c0-16.569-13.431-30-30-30s-30 13.431-30 30 13.431 30 30 30 30-13.431 30-30z'/%3E%3Ccircle cx='60' cy='60' r='3' opacity='0.4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}
         />
 
@@ -23,7 +23,7 @@ export default function Home() {
         <div
           className="absolute inset-0 opacity-0 hero-gradient-animate"
           style={{
-            background: `radial-gradient(circle at 30% 70%, ${colors.primary[600]}40 0%, transparent 50%), radial-gradient(circle at 70% 30%, ${colors.primary[800]}30 0%, transparent 50%)`
+            background: `radial-gradient(circle at 30% 70%, ${colors.primary[100]}60 0%, transparent 50%), radial-gradient(circle at 70% 30%, ${colors.primary[200]}40 0%, transparent 50%)`
           }}
         />
 
@@ -33,20 +33,20 @@ export default function Home() {
             <div className="space-y-6">
               <h1
                 className="text-6xl lg:text-8xl font-cedarville font-bold tracking-tight"
-                style={{ color: colors.text.white }}
+                style={{ color: colors.primary[700] }}
               >
                 Fretso
               </h1>
               <div className="space-y-4">
                 <p
                   className="text-2xl lg:text-3xl font-medium max-w-4xl mx-auto leading-tight"
-                  style={{ color: colors.text.white }}
+                  style={{ color: colors.text.primary }}
                 >
                   Report road issues. Build better Bengaluru.
                 </p>
                 <p
-                  className="text-xl lg:text-2xl opacity-90 font-medium"
-                  style={{ color: colors.text.white }}
+                  className="text-xl lg:text-2xl opacity-80 font-medium"
+                  style={{ color: colors.text.secondary }}
                 >
                   ನಮ್ಮ ಬೆಂಗಳೂರಿಗೆ ಒಂದು ಹೊಸ ಆರಂಭ
                 </p>
@@ -57,28 +57,28 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center space-y-3">
                 <div className="text-5xl mb-4">📍</div>
-                <h3 className="text-xl font-semibold" style={{ color: colors.text.white }}>
+                <h3 className="text-xl font-semibold" style={{ color: colors.text.primary }}>
                   One-Tap Reporting
                 </h3>
-                <p className="text-sm opacity-80" style={{ color: colors.text.white }}>
+                <p className="text-sm opacity-80" style={{ color: colors.text.secondary }}>
                   Spot a pothole? Report it instantly with GPS precision
                 </p>
               </div>
               <div className="text-center space-y-3">
                 <div className="text-5xl mb-4">🚀</div>
-                <h3 className="text-xl font-semibold" style={{ color: colors.text.white }}>
+                <h3 className="text-xl font-semibold" style={{ color: colors.text.primary }}>
                   Auto-Notify Authorities
                 </h3>
-                <p className="text-sm opacity-80" style={{ color: colors.text.white }}>
+                <p className="text-sm opacity-80" style={{ color: colors.text.secondary }}>
                   We handle the bureaucracy - direct alerts to BBMP
                 </p>
               </div>
               <div className="text-center space-y-3">
                 <div className="text-5xl mb-4">📊</div>
-                <h3 className="text-xl font-semibold" style={{ color: colors.text.white }}>
+                <h3 className="text-xl font-semibold" style={{ color: colors.text.primary }}>
                   Track Real Progress
                 </h3>
-                <p className="text-sm opacity-80" style={{ color: colors.text.white }}>
+                <p className="text-sm opacity-80" style={{ color: colors.text.secondary }}>
                   Full transparency from report to resolution
                 </p>
               </div>
@@ -89,8 +89,8 @@ export default function Home() {
               <div
                 className="p-10 rounded-3xl backdrop-blur-sm border-2 shadow-2xl"
                 style={{
-                  backgroundColor: `rgba(255, 255, 255, 0.15)`,
-                  borderColor: 'rgba(255, 255, 255, 0.3)'
+                  backgroundColor: colors.primary[700],
+                  borderColor: colors.primary[600]
                 }}
               >
                 <h3
@@ -108,7 +108,7 @@ export default function Home() {
                 <SubscriptionForm
                   source="Home Hero"
                   layout="vertical"
-                  inputClassName="w-full px-5 py-4 rounded-2xl border-2 text-gray-700 placeholder-gray-500 bg-white/95 focus:outline-none focus:ring-4 focus:ring-white/50 focus:border-white text-lg font-medium"
+                  inputClassName="w-full px-5 py-4 rounded-2xl border-2 text-gray-700 placeholder-gray-500 bg-white focus:outline-none focus:ring-4 focus:ring-purple-200 focus:border-purple-500 text-lg font-medium"
                   buttonClassName="w-full px-6 py-4 bg-white text-purple-700 rounded-2xl font-bold text-lg hover:bg-gray-100 transition-all duration-200 disabled:opacity-50 shadow-lg"
                   showLabels={false}
                 />
@@ -119,55 +119,55 @@ export default function Home() {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+          <div className="w-6 h-10 border-2 rounded-full flex justify-center" style={{ borderColor: `${colors.primary[700]}50` }}>
+            <div className="w-1 h-3 rounded-full mt-2 animate-pulse" style={{ backgroundColor: `${colors.primary[700]}70` }}></div>
           </div>
         </div>
       </div>
 
       {/* Problem Statement Section */}
-      <div className="py-24" style={{ backgroundColor: colors.background.main }}>
+      <div className="py-24" style={{ backgroundColor: colors.primary[700] }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2
               className="text-4xl lg:text-5xl font-bold mb-6"
-              style={{ color: colors.text.primary }}
+              style={{ color: colors.text.white }}
             >
               Every Bengaluru Citizen Knows This Pain
             </h2>
             <p
-              className="text-xl max-w-3xl mx-auto leading-relaxed"
-              style={{ color: colors.text.secondary }}
+              className="text-xl max-w-3xl mx-auto leading-relaxed opacity-90"
+              style={{ color: colors.text.white }}
             >
               ಪ್ರತಿದಿನ ಗುಂಡಿಗಳನ್ನು ತಪ್ಪಿಸುವ ಕಷ್ಟ, ಟ್ರಾಫಿಕ್ ಜಾಮ್, ಮತ್ತು ಹಾನಿಯಾದ ವಾಹನಗಳು - ಇದೆಲ್ಲ ಬದಲಾಗಬೇಕು!
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 rounded-2xl border" style={{ backgroundColor: colors.background.card, borderColor: colors.border.muted }}>
+            <div className="text-center p-8 rounded-2xl border-2" style={{ backgroundColor: `rgba(255, 255, 255, 0.1)`, borderColor: 'rgba(255, 255, 255, 0.2)' }}>
               <div className="text-6xl mb-6">😤</div>
-              <h3 className="text-xl font-bold mb-4" style={{ color: colors.text.primary }}>
+              <h3 className="text-xl font-bold mb-4" style={{ color: colors.text.white }}>
                 Frustrated Commuters
               </h3>
-              <p style={{ color: colors.text.secondary }}>
+              <p className="opacity-90" style={{ color: colors.text.white }}>
                 Daily navigation around potholes, damaged vehicles, and wasted time in traffic
               </p>
             </div>
-            <div className="text-center p-8 rounded-2xl border" style={{ backgroundColor: colors.background.card, borderColor: colors.border.muted }}>
+            <div className="text-center p-8 rounded-2xl border-2" style={{ backgroundColor: `rgba(255, 255, 255, 0.1)`, borderColor: 'rgba(255, 255, 255, 0.2)' }}>
               <div className="text-6xl mb-6">📞</div>
-              <h3 className="text-xl font-bold mb-4" style={{ color: colors.text.primary }}>
+              <h3 className="text-xl font-bold mb-4" style={{ color: colors.text.white }}>
                 Ignored Complaints
               </h3>
-              <p style={{ color: colors.text.secondary }}>
+              <p className="opacity-90" style={{ color: colors.text.white }}>
                 Traditional reporting methods are slow, bureaucratic, and often go unheard
               </p>
             </div>
-            <div className="text-center p-8 rounded-2xl border" style={{ backgroundColor: colors.background.card, borderColor: colors.border.muted }}>
+            <div className="text-center p-8 rounded-2xl border-2" style={{ backgroundColor: `rgba(255, 255, 255, 0.1)`, borderColor: 'rgba(255, 255, 255, 0.2)' }}>
               <div className="text-6xl mb-6">🔄</div>
-              <h3 className="text-xl font-bold mb-4" style={{ color: colors.text.primary }}>
+              <h3 className="text-xl font-bold mb-4" style={{ color: colors.text.white }}>
                 No Accountability
               </h3>
-              <p style={{ color: colors.text.secondary }}>
+              <p className="opacity-90" style={{ color: colors.text.white }}>
                 Zero visibility into whether issues are being addressed or just forgotten
               </p>
             </div>
@@ -176,18 +176,18 @@ export default function Home() {
       </div>
 
       {/* Solution Section */}
-      <div className="py-24" style={{ backgroundColor: colors.primary[700] }}>
+      <div className="py-24" style={{ backgroundColor: colors.text.white }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2
               className="text-4xl lg:text-5xl font-bold mb-6"
-              style={{ color: colors.text.white }}
+              style={{ color: colors.primary[700] }}
             >
               The Fretso Solution
             </h2>
             <p
-              className="text-xl max-w-3xl mx-auto leading-relaxed opacity-90"
-              style={{ color: colors.text.white }}
+              className="text-xl max-w-3xl mx-auto leading-relaxed"
+              style={{ color: colors.text.secondary }}
             >
               Technology-powered civic engagement that actually works
             </p>
@@ -223,20 +223,20 @@ export default function Home() {
               <div key={index} className="text-center">
                 <div
                   className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center text-2xl font-bold"
-                  style={{ backgroundColor: colors.text.white, color: colors.primary[700] }}
+                  style={{ backgroundColor: colors.primary[700], color: colors.text.white }}
                 >
                   {item.step}
                 </div>
                 <div className="text-4xl mb-4">{item.icon}</div>
                 <h3
                   className="text-xl font-bold mb-4"
-                  style={{ color: colors.text.white }}
+                  style={{ color: colors.text.primary }}
                 >
                   {item.title}
                 </h3>
                 <p
-                  className="text-sm leading-relaxed opacity-90"
-                  style={{ color: colors.text.white }}
+                  className="text-sm leading-relaxed"
+                  style={{ color: colors.text.secondary }}
                 >
                   {item.description}
                 </p>
@@ -250,12 +250,12 @@ export default function Home() {
       <MapSection />
 
       {/* Impact Vision Section */}
-      <div className="py-24" style={{ backgroundColor: colors.background.accent }}>
+      <div className="py-24" style={{ backgroundColor: colors.text.white }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2
               className="text-4xl lg:text-5xl font-bold mb-6"
-              style={{ color: colors.text.primary }}
+              style={{ color: colors.primary[700] }}
             >
               Imagine Bengaluru in 2025
             </h2>
@@ -318,12 +318,12 @@ export default function Home() {
                 Join 10,000+ Bengaluru citizens already signed up to make this vision reality
               </p>
               <div className="max-w-md mx-auto">
-                <div className="p-6 rounded-2xl border-2 shadow-lg" style={{ backgroundColor: colors.background.card, borderColor: colors.border.muted }}>
+                <div className="p-6 rounded-2xl border-2 shadow-lg" style={{ backgroundColor: colors.primary[700], borderColor: colors.primary[600] }}>
                   <SubscriptionForm
                     source="Impact Vision"
                     layout="vertical"
-                    inputClassName="w-full px-4 py-3 rounded-xl border-2 text-gray-700 placeholder-gray-400 bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 text-base"
-                    buttonClassName="w-full px-6 py-3 bg-purple-600 text-white rounded-xl font-semibold hover:bg-purple-700 transition-all duration-200 disabled:opacity-50 text-base"
+                    inputClassName="w-full px-4 py-3 rounded-xl border-2 text-gray-700 placeholder-gray-400 bg-white focus:outline-none focus:ring-2 focus:ring-purple-200 focus:border-purple-500 text-base"
+                    buttonClassName="w-full px-6 py-3 bg-white text-purple-700 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-200 disabled:opacity-50 text-base"
                     showLabels={false}
                   />
                 </div>
