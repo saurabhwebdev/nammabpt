@@ -9,14 +9,14 @@ export default function About() {
     <div className="bg-background min-h-screen py-12">
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 p-12 rounded-2xl" style={{ backgroundColor: colors.primary[700] }}>
           <h1 
             className="text-4xl md:text-5xl font-cedarville font-bold mb-4"
-            style={{ color: colors.special.comingSoon }}
+            style={{ color: colors.text.white }}
           >
             About Fretso
           </h1>
-          <p className="text-xl" style={{ color: colors.text.secondary }}>
+          <p className="text-xl" style={{ color: colors.text.white }}>
             ನಮ್ಮ ಕನಸು - ಸುಂದರವಾದ ಬೆಂಗಳೂರು
           </p>
         </div>
@@ -109,7 +109,7 @@ export default function About() {
           </div>
 
           {/* CTA Section */}
-          <div className="text-center p-8 rounded-xl" style={{ backgroundColor: colors.special.comingSoon, color: colors.text.white }}>
+          <div className="text-center p-8 rounded-xl" style={{ backgroundColor: colors.primary[700], color: colors.text.white }}>
             <h2 className="text-2xl font-bold mb-4">Ready to Make a Difference?</h2>
             <p className="text-lg mb-6">
               Join thousands of Bengaluru citizens who are taking action!

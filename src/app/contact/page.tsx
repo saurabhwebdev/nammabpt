@@ -9,14 +9,14 @@ export default function Contact() {
     <div className="bg-background min-h-screen py-12">
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 p-12 rounded-2xl" style={{ backgroundColor: colors.primary[700] }}>
           <h1 
             className="text-4xl md:text-5xl font-cedarville font-bold mb-4"
-            style={{ color: colors.special.comingSoon }}
+            style={{ color: colors.text.white }}
           >
             Contact Us
           </h1>
-          <p className="text-xl" style={{ color: colors.text.secondary }}>
+          <p className="text-xl" style={{ color: colors.text.white }}>
             ನಮ್ಮೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಿ - Let's build better roads together!
           </p>
         </div>
@@ -107,7 +107,7 @@ export default function Contact() {
             </div>
 
             {/* FAQ Teaser */}
-            <div className="p-6 rounded-xl" style={{ backgroundColor: colors.special.comingSoon, color: colors.text.white }}>
+            <div className="p-6 rounded-xl" style={{ backgroundColor: colors.primary[700], color: colors.text.white }}>
               <h3 className="text-lg font-bold mb-2">Have Questions?</h3>
               <p className="mb-4">
                 Check out our FAQ section or drop us a message. We're here to help!
