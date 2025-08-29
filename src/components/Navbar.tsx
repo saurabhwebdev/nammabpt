@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { colors } from '@/lib/colors';
 import SubscriptionForm from './SubscriptionForm';
+import PWAInstallButton from './PWAInstallButton';
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -90,6 +91,7 @@ export default function Navbar() {
                                 >
                                     Contact
                                 </Link>
+                                <PWAInstallButton />
                             </div>
                         </div>
 
@@ -200,6 +202,11 @@ export default function Navbar() {
                             >
                                 📞 Contact
                             </Link>
+
+                            {/* PWA Install Button */}
+                            <div className="px-4">
+                                <PWAInstallButton />
+                            </div>
 
                             {/* Subscription Section */}
                             <div className="mt-8 pt-6 border-t border-white/20">

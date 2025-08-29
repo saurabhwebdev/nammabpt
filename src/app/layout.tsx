@@ -75,20 +75,10 @@ export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" }
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" }
     ],
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
-    ],
-    other: [
-      {
-        rel: "mask-icon",
-        url: "/safari-pinned-tab.svg",
-        color: "#EE4266"
-      }
-    ]
+    shortcut: "/favicon.ico"
   },
   manifest: "/site.webmanifest",
   formatDetection: {
@@ -98,8 +88,8 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://fretso.com"),
   other: {
-    "msapplication-TileColor": "#EE4266",
-    "theme-color": "#F7F7FF"
+    "msapplication-TileColor": "#540D6E",
+    "theme-color": "#540D6E"
   }
 };
 
