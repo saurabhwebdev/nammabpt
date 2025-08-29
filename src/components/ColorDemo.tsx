@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import { colors, cssVars, colorUtils } from '@/lib/colors';
+import { colors, cssVars } from '@/lib/colors';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
