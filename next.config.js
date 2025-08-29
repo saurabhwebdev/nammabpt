@@ -12,7 +12,7 @@ const nextConfig = {
 
   // Enable static exports for better performance
   output: 'standalone',
-  
+
   // Compress responses
   compress: true,
 
