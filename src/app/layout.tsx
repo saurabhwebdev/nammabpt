@@ -3,7 +3,7 @@ import { Inter, Cedarville_Cursive } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { generateMetadata } from "@/lib/seo-config";
+
 
 const inter = Inter({
   subsets: ["latin"],

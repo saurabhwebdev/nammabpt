@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fretso - Bengaluru Road Issues Reporter
 
-## Getting Started
+A community-driven platform for reporting potholes and road issues in Bengaluru. Built with Next.js 15, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Interactive Map**: Leaflet-powered map showing Bengaluru
+- **Email Subscriptions**: FormSubmit integration for launch notifications
+- **Mobile-First Design**: Responsive design with mobile menu
+- **SEO Optimized**: Comprehensive meta tags and structured data
+- **Bilingual Support**: English and Kannada content
+- **Performance Optimized**: Fast loading with Next.js optimizations
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Maps**: Leaflet & React Leaflet
+- **Fonts**: Google Fonts (Inter, Cedarville Cursive)
+- **Deployment**: Vercel
+
+## 📦 Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Copy environment variables:
+   ```bash
+   cp .env.example .env.local
+   ```
+4. Run development server:
+   ```bash
+   npm run dev
+   ```
+
+## 🚀 Deployment to Vercel
+
+### Automatic Deployment (Recommended)
+
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Vercel will automatically deploy on every push to main branch
+
+### Manual Deployment
+
+1. Install Vercel CLI:
+   ```bash
+   npm i -g vercel
+   ```
+2. Deploy:
+   ```bash
+   vercel --prod
+   ```
+
+### Environment Variables
+
+Set these in Vercel dashboard:
+- `NEXT_PUBLIC_SITE_URL`: Your domain (e.g., https://fretso.com)
+- `NEXT_PUBLIC_FORM_EMAIL`: Email for form submissions
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                 # App Router pages
+│   ├── about/          # About page
+│   ├── contact/        # Contact page
+│   ├── privacy/        # Privacy policy
+│   ├── services/       # Services page
+│   ├── support/        # Support page
+│   ├── terms/          # Terms of service
+│   ├── thank-you/      # Thank you page
+│   ├── layout.tsx      # Root layout with SEO
+│   └── page.tsx        # Home page
+├── components/         # Reusable components
+│   ├── Footer.tsx      # Site footer
+│   ├── Map.tsx         # Leaflet map
+│   ├── Navbar.tsx      # Navigation with mobile menu
+│   └── SubscriptionForm.tsx # Email subscription
+└── lib/                # Utilities
+    ├── colors.ts       # Color system
+    ├── formSubmit.ts   # Form submission handler
+    └── seo-config.ts   # SEO configurations
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Colors
+Edit `src/lib/colors.ts` to change the color scheme.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Content
+- Update page content in respective `page.tsx` files
+- Modify SEO settings in `src/lib/seo-config.ts`
+- Change site metadata in `src/app/layout.tsx`
 
-## Learn More
+## 📈 SEO Features
 
-To learn more about Next.js, take a look at the following resources:
+- Comprehensive meta tags for all pages
+- Open Graph and Twitter Card support
+- Structured data (JSON-LD)
+- Sitemap and robots.txt
+- Optimized for local search (Bengaluru)
+- Bilingual content support
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Performance Optimizations
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Next.js 15 App Router
+- Static generation where possible
+- Image optimization
+- Font optimization
+- Compression enabled
+- Security headers
+- Caching strategies
 
-## Deploy on Vercel
+## 📱 PWA Ready
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Web App Manifest
+- Service Worker ready
+- Mobile-optimized
+- Offline-first approach
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🆘 Support
+
+For support, email worlddj0@gmail.com or create an issue on GitHub.
+
+---
+
+Built with ❤️ for Bengaluru by the Fretso team.
