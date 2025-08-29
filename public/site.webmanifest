@@ -1,0 +1,73 @@
+{
+  "name": "Fretso - Bengaluru Road Issues Reporter",
+  "short_name": "Fretso",
+  "description": "Report potholes and road issues in Bengaluru. Community-driven platform for better city infrastructure.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F7FF",
+  "theme_color": "#EE4266",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-IN",
+  "categories": ["productivity", "utilities", "lifestyle"],
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Fretso Desktop Interface"
+    },
+    {
+      "src": "/screenshot-mobile.jpg", 
+      "sizes": "390x844",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Fretso Mobile Interface"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Report Issue",
+      "short_name": "Report",
+      "description": "Quickly report a road issue",
+      "url": "/?action=report",
+      "icons": [
+        {
+          "src": "/shortcut-report.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.fretso.app",
+      "id": "com.fretso.app"
+    }
+  ]
+}

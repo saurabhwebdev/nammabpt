@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you
+
+# Sitemap
+Sitemap: https://fretso.com/sitemap.xml
+
+# Crawl delay (in seconds)
+Crawl-delay: 1
+
+# Block specific bots if needed
+# User-agent: BadBot
+# Disallow: /

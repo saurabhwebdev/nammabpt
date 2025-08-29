@@ -1,26 +1,121 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
 }
+
+.font-cedarville {
+  font-family: var(--font-cedarville), cursive;
+}
+
+:root {
+  /* Main app background - #F7F7FF */
+  --background: 242 100% 98.8%;
+  --foreground: 240 10% 3.9%;
+  
+  /* Card backgrounds */
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  
+  /* Popover */
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  
+  /* Primary colors - Deep blue/purple */
+  --primary: 250 84% 54%;
+  --primary-foreground: 0 0% 98%;
+  
+  /* Secondary colors - Light purple tint */
+  --secondary: 245 58% 92%;
+  --secondary-foreground: 245 25% 25%;
+  
+  /* Muted colors */
+  --muted: 242 35% 95%;
+  --muted-foreground: 240 3.8% 46.1%;
+  
+  /* Accent colors */
+  --accent: 250 100% 96%;
+  --accent-foreground: 250 84% 54%;
+  
+  /* Destructive/Error */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  
+  /* Success color */
+  --success: 142 76% 36%;
+  --success-foreground: 0 0% 98%;
+  
+  /* Warning color */
+  --warning: 38 92% 50%;
+  --warning-foreground: 0 0% 98%;
+  
+  /* Borders and inputs */
+  --border: 242 45% 88%;
+  --input: 242 45% 88%;
+  --ring: 250 84% 54%;
+  
+  /* Chart colors */
+  --chart-1: 250 84% 54%;
+  --chart-2: 200 98% 39%;
+  --chart-3: 280 87% 65%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 340 82% 52%;
+  
+  /* Border radius */
+  --radius: 0.75rem;
+}
+
+.dark {
+  /* Dark background */
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  
+  /* Card backgrounds */
+  --card: 240 10% 6%;
+  --card-foreground: 0 0% 98%;
+  
+  /* Popover */
+  --popover: 240 10% 6%;
+  --popover-foreground: 0 0% 98%;
+  
+  /* Primary colors - Brighter in dark mode */
+  --primary: 250 84% 64%;
+  --primary-foreground: 240 5.9% 10%;
+  
+  /* Secondary colors */
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  
+  /* Muted colors */
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  
+  /* Accent colors */
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 250 84% 64%;
+  
+  /* Destructive/Error */
+  --destructive: 0 62.8% 50%;
+  --destructive-foreground: 0 0% 98%;
+  
+  /* Success color */
+  --success: 142 76% 46%;
+  --success-foreground: 0 0% 98%;
+  
+  /* Warning color */
+  --warning: 38 92% 60%;
+  --warning-foreground: 0 0% 0%;
+  
+  /* Borders and inputs */
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 250 84% 64%;
+  
+  /* Chart colors - adjusted for dark mode */
+  --chart-1: 250 84% 64%;
+  --chart-2: 200 98% 49%;
+  --chart-3: 280 87% 75%;
+  --chart-4: 43 74% 76%;
+  --chart-5: 340 82% 62%;
+}
+

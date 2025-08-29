@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive:wght@400&display=swap');
+      .fretso-f {
+        fill: #EE4266;
+        font-family: 'Cedarville Cursive', cursive;
+        font-size: 70px;
+        font-weight: bold;
+      }
+    </style>
+  </defs>
+  <circle cx="50" cy="50" r="45" fill="#F7F7FF" stroke="#EE4266" stroke-width="3"/>
+  <text class="fretso-f" x="50" y="70" text-anchor="middle">F</text>
+</svg>
