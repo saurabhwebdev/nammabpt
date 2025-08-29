@@ -1,0 +1,68 @@
+/* Hero Section Background Animations */
+
+@keyframes fadeInSlow {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 0.15;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes fadeInMedium {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.3;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% -200%;
+    }
+
+    50% {
+        background-position: 200% 200%;
+    }
+
+    100% {
+        background-position: -200% -200%;
+    }
+}
+
+@keyframes heroPulse {
+
+    0%,
+    100% {
+        opacity: 0.03;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.08;
+        transform: scale(1.02);
+    }
+}
+
+/* Animation utility classes */
+.hero-bg-animate {
+    animation: fadeInSlow 2s ease-in-out 0.5s forwards;
+}
+
+.hero-gradient-animate {
+    animation: fadeInMedium 1.5s ease-in-out 1s forwards;
+}
+
+.hero-shimmer-animate {
+    animation: shimmer 4s ease-in-out 2s infinite;
+}
+
+.hero-pattern-animate {
+    animation: fadeInSlow 3s ease-in-out 1.5s forwards, heroPulse 6s ease-in-out infinite;
+}

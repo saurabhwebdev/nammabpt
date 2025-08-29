@@ -12,15 +12,19 @@ interface SubscriptionFormProps {
   buttonClassName?: string;
   layout?: 'horizontal' | 'vertical';
   showKannada?: boolean;
+  showLabels?: boolean;
+  compact?: boolean;
 }
 
-export default function SubscriptionForm({ 
-  source, 
-  className = '', 
-  inputClassName = '', 
+export default function SubscriptionForm({
+  source,
+  className = '',
+  inputClassName = '',
   buttonClassName = '',
   layout = 'horizontal',
-  showKannada = true
+  showKannada = true,
+  showLabels = true,
+  compact = false
 }: SubscriptionFormProps) {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -29,14 +33,14 @@ export default function SubscriptionForm({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email) return;
-    
+
     setIsSubmitting(true);
     setMessage('');
 
     const result = await submitSubscription(email, source);
-    
+
     if (result.success) {
       // Show success message briefly then redirect
       setMessage('✅ Subscribed successfully!');
@@ -49,8 +53,8 @@ export default function SubscriptionForm({
     }
   };
 
-  const containerClass = layout === 'horizontal' 
-    ? 'flex flex-col sm:flex-row gap-2' 
+  const containerClass = layout === 'horizontal'
+    ? 'flex flex-col sm:flex-row gap-2'
     : 'space-y-2';
 
   const defaultInputClass = layout === 'horizontal'
@@ -63,19 +67,19 @@ export default function SubscriptionForm({
 
   return (
     <div className={className}>
-      {showKannada && (
+      {showKannada && showLabels && !compact && (
         <p className="text-sm mb-4 opacity-90" style={{ color: colors.text.white }}>
-          ಲಾಂಚ್ ಆದಾಗ ಮೊದಲು ತಿಳಿದುಕೊಳ್ಳಿ!
+          Be the first to know when we launch!
         </p>
       )}
-      
+
       <form onSubmit={handleSubmit}>
         <div className={containerClass}>
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
+            placeholder={compact ? "Email" : "Enter your email"}
             required
             disabled={isSubmitting}
             className={inputClassName || defaultInputClass}
@@ -85,12 +89,12 @@ export default function SubscriptionForm({
             disabled={isSubmitting || !email}
             className={buttonClassName || defaultButtonClass}
           >
-            {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+            {isSubmitting ? (compact ? '...' : 'Subscribing...') : (compact ? 'Subscribe' : 'Subscribe')}
           </button>
         </div>
       </form>
-      
-      {message && (
+
+      {message && !compact && (
         <p className={`text-sm mt-2 ${message.includes('✅') ? 'text-green-200' : 'text-red-200'}`}>
           {message}
         </p>
