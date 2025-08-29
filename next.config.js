@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable static exports for better performance
-  output: 'standalone',
-  
   // Disable ESLint during build for deployment
   eslint: {
     ignoreDuringBuilds: true,
@@ -12,7 +9,13 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+
+  // Enable static exports for better performance
+  output: 'standalone',
   
+  // Compress responses
+  compress: true,
+
   // Optimize images
   images: {
     formats: ['image/webp', 'image/avif'],
@@ -20,52 +23,10 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 
-  // Compress responses
-  compress: true,
-
   // Enable experimental features for better performance
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['leaflet', 'react-leaflet'],
-  },
-
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on'
-          },
-          {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=63072000; includeSubDomains; preload'
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff'
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY'
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block'
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
-          },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=(self)'
-          }
-        ],
-      },
-    ];
   },
 
   // Redirects
@@ -77,11 +38,6 @@ const nextConfig = {
         permanent: true,
       },
     ];
-  },
-
-  // Environment variables
-  env: {
-    CUSTOM_KEY: 'fretso-app',
   },
 
   // Webpack optimization
